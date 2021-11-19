@@ -63,7 +63,8 @@ span {
 }
 
 .about-me {
-  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
   padding: var(--padding);
   text-align: center;
 
