@@ -60,7 +60,8 @@ span{
 }
 
 .about-me {
-  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   /*background-color: orange;*/
