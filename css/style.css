@@ -278,7 +278,7 @@ textarea {
 
 button,
 .button { /* all the button are targeted here at once by multiple selector (,)! */
-  width: auto;
+  height: auto;
   border: none;
   display: inline-block;
   font-family: inherit;
