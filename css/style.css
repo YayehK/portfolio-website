@@ -10,7 +10,7 @@ Secondary Color- Orange: #e0b354; */
   --dark-grey: #2b2b2b;
   --background-color: #f8f8ff;
   --shade-pink: #b76386;
-  --light-grey: #d3d3d3;
+  --light-grey: #e7e7e7;
   --padding: 10px;
 }
 
@@ -183,6 +183,7 @@ color: inherit;
   width: 70%;
   padding: 20px;
   margin: 0 auto;
+  
 }
 
 .contact-info {
@@ -335,6 +336,10 @@ button:focus,
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3; */
+  }
+
+  .project-list a {
+    color: #1d7468; /* picked this color because of insufficient contrast ration */
   }
 }
 

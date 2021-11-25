@@ -237,7 +237,7 @@ background-color: #e0b354;
 color: inherit;
 } */
 .contact {
-  background-color: #d3d3d3;
+  background-color: #e7e7e7;
   font-family: inherit;
   width: 70%;
   padding: 20px;
@@ -324,7 +324,7 @@ textarea {
   display: flex;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #e7e7e7;
 
   /* background-color: lightgrey; */
 
@@ -421,7 +421,7 @@ button:focus,
   }
 
   .project-list__item {
-    background-color: #d3d3d3;
+    background-color: #e7e7e7;
     width: auto;
     min-height: auto;
     margin: 0;
