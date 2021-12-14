@@ -38,37 +38,43 @@
     </div>
     <a href="#" class="button" download> Download my CV</a>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Skills</th>
-          <th>Years of Experience</th>
-          <th>Level of Experience</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>HTML</td>
-          <td>0.3</td>
-          <td>Beginner</td>
-        </tr>
-        <tr>
-          <td>CSS</td>
-          <td>0.2</td>
-          <td>Beginner</td>
-        </tr>
-        <tr>
-          <td>JavaScript</td>
-          <td>0.1</td>
-          <td>Beginner</td>
-        </tr>
-        <tr>
-          <td>python</td>
-          <td>1</td>
-          <td>Intermediate</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="skillbar-wrapper">
+      <div class="skillbar clearfix html5" data-percent="80%">
+        <h2 class="skillbar-title"><span>HTML5</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">80%</div>
+      </div>
+
+      <div class="skillbar clearfix css3" data-percent="70%">
+        <h2 class="skillbar-title"><span>CSS</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">70%</div>
+      </div>
+
+      <div class="skillbar clearfix javascript" data-percent="60%">
+        <h2 class="skillbar-title"><span>JavaScript</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">60%</div>
+      </div>
+
+      <div class="skillbar clearfix jquery" data-percent="30%">
+        <h2 class="skillbar-title"><span>jQuery</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">30%</div>
+      </div>
+
+      <div class="skillbar clearfix python" data-percent="40%">
+        <h2 class="skillbar-title"><span>python</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">40%</div>
+      </div>
+
+      <div class="skillbar clearfix server" data-percent="20%">
+        <h2 class="skillbar-title"><span>Server</span></h2>
+        <div class="skillbar-bar"></div>
+        <div class="skill-bar-percent">20%</div>
+      </div>
+    </div>
 
     <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="auto" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
@@ -682,5 +688,6 @@
     <p class="copyright">copyright &copy; 2021 - Yayeh Kebte</p>
   </footer>
   <script src="js/tota11y.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
