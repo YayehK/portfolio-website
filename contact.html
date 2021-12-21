@@ -43,9 +43,6 @@
           Email:<a href="mailto:office@yayehkebte.com"> office@yayehkebte.com</a>
         </p> <br>
 
-        <!--<a href="">Contact me</a> <br>-->
-        <!--<button id="contact-modal">Contact me</button>
-        <div id="modal-container"> </div>-->
       </div>
 
       <div>
@@ -54,18 +51,30 @@
       <form action="index.html" method="post" id="contact-form">
 
         <div class="input-wrapper">
-          <label class="standard-lable" for="contact-email">E-Mail:</label>
-          <input type="email" id="contact-email" value="" >
+          <div class="input-wrapper__lable">
+            <label class="standard-lable" for="contact-email">E-Mail</label>
+          </div>
+          <div class="input-wrapper__input">
+            <input type="email" id="contact-email" placeholder="Your email..." >
+          </div>
         </div>
 
         <div class="input-wrapper">
-          <label class="standard-lable" for="tel"> Telephone:</label>
-          <input type="tel" id="tel" name="tel" pattern="d{3}[-]d{3}[-]d{4}" >
+          <div class="input-wrapper__lable">
+            <label class="standard-lable" for="tel"> Telephone</label>
+          </div>
+          <div class="input-wrapper__input">
+            <input type="tel" id="tel" name="tel" pattern="d{3}[-]d{3}[-]d{4}" placeholder="Your Telephone..">
+          </div>
         </div>
 
         <div class="input-wrapper">
-          <label class="standard-lable" for="message">Message:</label>
-          <textarea name="message" id="message" >Write your message here</textarea>
+          <div class="input-wrapper__lable">
+            <label class="standard-lable" for="message">Message</label>
+          </div>
+          <div class="input-wrapper__input">
+            <textarea name="message" id="message" placeholder="Write your message here"></textarea>
+          </div>
         </div>
 
         <div>
