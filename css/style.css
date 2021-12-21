@@ -36,25 +36,31 @@ h2 {
   font-weight: 700;
 }
 
-a {
+.page-header a {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
-a:visited { /* already clicked or visited link */
+.page-header a:visited {  /* already clicked or visited link*/
   color: var(--secondary-color);
 }
 
-a:hover,
-a:focus {
+.page-header a:hover,
+.page-header a:focus {
   text-decoration: none; /* No underlining or special effect when hovering over a link */
 }
 
-a:active { /* selected link */
+.page-header a:active { /* selected link */
   color: var(--shade-pink);
 }
 
+.project-link {
+  color: var(--secondary-color);
+}
+
 .navigation-list__item--active {
-  text-decoration: none;
+  text-decoration: inherit;
+  font-style: oblique;
 }
 
 span {
@@ -394,11 +400,13 @@ fill: #f76414;
   margin: 40px 10px;
   border-radius: 50%;
   padding: 10px;
+  /*border: 1px solid red;*/ /*just to visualization*/
 }
 
 .profile__text {
   padding-top: 40px;
   margin: 40px 30px;
+  /*border: 1px solid red;*/  /*just to visualization*/
 }
 
 .page-header {
@@ -550,16 +558,17 @@ Responsive classes, @media, @supports, usually added at the very end of CSS file
 
 @media all and (max-width: 500px) {
   .profile__portrait {
-    float: none;
-    width: 150px;
+    width: 200px;
     height: auto;
+    margin: 0;
   }
 }
 
 @media (max-width: 500px) {
   .profile {
+    display: inline-block;
     max-width: 250px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     text-align: center;
     height: auto;
   }
