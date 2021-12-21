@@ -364,22 +364,11 @@ fill: #f76414;
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*justify-content: center;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  /*background-color: var(--light-grey);*/
   font-family: inherit;
   width: 70%;
   padding: 20px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact .contact-info {
@@ -389,44 +378,43 @@ fill: #f76414;
   text-align: center;
 }
 
-.contact .input-wrapper {
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cec7cd;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.input-wrapper__lable {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.input-wrapper__input {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+}
+
+/* to clear floats after the columns */
+.input-wrapper:after {
+  content: "";
+  display: table;
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 8px;
-  /*align-items: right;*/
 }
 
 @media all and (max-width: 500px) {
-  .contact .input-wrapper {
-    max-width: 100px;
+  .input-wrapper__lable, .input-wrapper__input, .contact button {
+    width: 100%;
+    margin-top: 0;
   }
-
-  .input-wrapper textarea {
-    max-width: 180px;
-  }
-}
-
-.input-wrapper input {
-  max-width: 150px;
-}
-
-.input-wrapper textarea {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 400px;
-  height: 100px;
-}
-
-.contact #contact-optional {
-  font-family: inherit;
-  font-size: 16px;
 }
 
 .error-message {
@@ -454,7 +442,6 @@ fill: #f76414;
   position: relative;
   bottom: 0;
   width: 100%;
-
 }
 
 .social-media > * {
