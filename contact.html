@@ -4,9 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon-32x32.png"/>
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity=
+  "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.production.css">
+  <link rel="stylesheet" href="css/style.css">
   <title> Contact Yayeh Kebte </title>
 </head>
 <body>
@@ -43,60 +52,130 @@
           Email:<a href="mailto:office@yayehkebte.com"> office@yayehkebte.com</a>
         </p> <br>
 
-      </div>
+        <button data-target="#contactModal" data-toggle='modal'>Get in touch</button>
 
-      <div>
-        <h2 id="contact-optional">Get in touch</h2>
-      </div>
-      <form action="index.html" method="post" id="contact-form">
+        <div class="modal" id="contactModal" role="dialog" aria-labelledy= "myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!--  modal root-->
+              <div class="modal-header" text-center>
+                <h2 class="myModalLabel">Write me</h2>
+                <button type="button" class="close" data-dismiss= "modal" aria-label= "Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!--Modal body-->
+              <div class="inputs">
+                <!--username input-->
+                <div class="form-group input-group">
+                  <label for="username" class="sr-only">Your name</label>
+                  <span class="input-group-addon">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <input type="text" class="form-control" id="username" placeholder="Your name">
+                </div>
+                <!--  Email input-->
+                <div class="form-group input-group">
+                  <span class="input-group-addon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <label data-error="wrong" data-success="right" for="email" class="sr-only">Email</label>
+                  <input type="email" class="form-control validate" id="email" placeholder="Your email">
+                </div>
+                <!--  Subject input-->
+                <div class="form-group input-group">
+                  <span class="input-group-addon">
+                    <i class="fas fa-tel"></i>
+                  </span>
+                  <input type="tel" id="tel" name="tel" pattern="d{3}[-]d{3}[-]d{4}" placeholder="Your telephone">
+                  <!--<label for="subject" class="sr-only">Subject</label>-->
+                  <!--<input type="text" id="subject" placeholder="Subject">-->
+                </div>
 
-        <div class="input-wrapper">
-          <div class="input-wrapper__lable">
-            <label class="standard-lable" for="contact-email">E-Mail</label>
+                <div class="form-group input-group">
+                  <i class="fa fa-pencil"></i>
+                  <textarea type="text" id="message" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea>
+                </div>
+
+              </div>
+              <div class="footer">
+                <button type="submit">Send message</button>
+              </div>
+
+            </div>
+
           </div>
-          <div class="input-wrapper__input">
-            <input type="email" id="contact-email" placeholder="Your email..." >
-          </div>
+
         </div>
 
-        <div class="input-wrapper">
-          <div class="input-wrapper__lable">
-            <label class="standard-lable" for="tel"> Telephone</label>
-          </div>
-          <div class="input-wrapper__input">
-            <input type="tel" id="tel" name="tel" pattern="d{3}[-]d{3}[-]d{4}" placeholder="Your Telephone..">
-          </div>
-        </div>
 
-        <div class="input-wrapper">
-          <div class="input-wrapper__lable">
-            <label class="standard-lable" for="message">Message</label>
-          </div>
-          <div class="input-wrapper__input">
-            <textarea name="message" id="message" placeholder="Write your message here"></textarea>
-          </div>
-        </div>
+        <!--      </div>
 
         <div>
-          <button class="button" type="submit" value="">Send message</button>
-        </div>
+        <button id="contact-optional" data-toggle='modal'>Get in touch</button>
+      </div>
 
-      </form>
-    </div>
+      <form action="index.html" method="post" id="contact-form">
 
-  </main>
-  <br><br>
-  <footer class="page-footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <a href="https://www.xing.com/profile/YayehD_Kebte" target="_blank"><img height="30" width="30" src="img/xing-logo.svg" alt="link to my Xing profile"></a>
-      <a href="https://de.linkedin.com/in/yayeh-d-k-64306055" target="_blank"><img height="30" width="30" src="img/linkedin.svg" alt="link to my Linkedin profile"></a>
-      <a href="https://twitter.com/" target="_blank"><img height="30" width="30" src="img/twitter.svg" alt="link to my Twitter account"></a>
-      <a href="https://github.com/YayehK" target="_blank"><img height="30" width="30" src="img/github.svg" alt="link to my Github account"> </a>
+      <div class="input-wrapper">
+      <div class="input-wrapper__lable">
+      <label class="standard-lable" for="contact-email">E-Mail</label>
     </div>
-    <p class="copyright">copyright &copy; 2021 - Yayeh Kebte</p>
-  </footer>
-  <script src="js/tota11y.min.js"></script>
-  <script src="js/scripts.js"></script>
+    <div class="input-wrapper__input">
+    <input type="email" id="contact-email" placeholder="Your email..." >
+  </div>
+</div>
+
+<div class="input-wrapper">
+<div class="input-wrapper__lable">
+<label class="standard-lable" for="tel"> Telephone</label>
+</div>
+<div class="input-wrapper__input">
+<input type="tel" id="tel" name="tel" pattern="d{3}[-]d{3}[-]d{4}" placeholder="Your Telephone..">
+</div>
+</div>
+
+<div class="input-wrapper">
+<div class="input-wrapper__lable">
+<label class="standard-lable" for="message">Message</label>
+</div>
+<div class="input-wrapper__input">
+<textarea name="message" id="message" placeholder="Write your message here"></textarea>
+</div>
+</div>
+
+<div>
+<button class="button" type="submit" value="">Send message</button>
+</div>
+
+</form>
+</div>-->
+
+</main>
+<br><br>
+<footer class="page-footer">
+  <p>Find me on</p>
+  <div class="social-media">
+    <a href="https://www.xing.com/profile/YayehD_Kebte" target="_blank"><img height="30" width="30" src="img/xing-logo.svg" alt="link to my Xing profile"></a>
+    <a href="https://de.linkedin.com/in/yayeh-d-k-64306055" target="_blank"><img height="30" width="30" src="img/linkedin.svg" alt="link to my Linkedin profile"></a>
+    <a href="https://twitter.com/" target="_blank"><img height="30" width="30" src="img/twitter.svg" alt="link to my Twitter account"></a>
+    <a href="https://github.com/YayehK" target="_blank"><img height="30" width="30" src="img/github.svg" alt="link to my Github account"> </a>
+  </div>
+  <p class="copyright">copyright &copy; 2021 - Yayeh Kebte</p>
+</footer>
+
+<script src="js/tota11y.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--><!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>-->
+
 </body>
 </html>
