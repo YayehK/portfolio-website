@@ -57,9 +57,9 @@
 //adds email and telephone real-time form validation
 
 (function () {
-  let form = document.querySelector('#contact-form');
-  let emailInput = document.querySelector('#contact-email');
-  let teleInput = document.querySelector('#tel');
+  let form = document.querySelector('#contactModal');
+  let emailInput = document.querySelector('#email');
+  let teleInput = document.querySelector('#subject');
 
   function validateEmail() {
     let value = emailInput.value;
